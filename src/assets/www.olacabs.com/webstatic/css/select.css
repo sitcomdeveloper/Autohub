@@ -124,7 +124,8 @@
       margin-right: 0; }
   
   .menu-icon {
-    background: url("../img/menu.svg") no-repeat;
+    /* background: url("../img/menu.svg") no-repeat; */
+    background: url("src/assets/www.olacabs.com/webstatic/img/menu.svg") no-repeat;
     width: 23px;
     height: 18px;
     display: inline-block;

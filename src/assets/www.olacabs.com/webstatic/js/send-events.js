@@ -45,11 +45,11 @@ $(document).ready(function() {
 		var getParams = { browserName: getBrowser(), platform: getPlatform(), domain: window.location.hostname };
 		var finalParams = Object.assign(getParams, publishParams);
 		// var url = "https://book.stg.corp.olacabs.com/api/event/publish?";
-		var url = "/bookingapi/event/publish?";
-		for (var key in finalParams) url = url + key + "=" + encodeURIComponent(finalParams[key]) + "&";
-		url = url.replace(/&$/, "");
+		// var url = "/bookingapi/event/publish?";
+		// for (var key in finalParams) url = url + key + "=" + encodeURIComponent(finalParams[key]) + "&";
+		// url = url.replace(/&$/, "");
 		$.get( 
-            url, 
+            // url, 
             function (data) { 
                 // console.log(data); 
                 cb();
@@ -205,17 +205,17 @@ $(document).ready(function() {
             eventName: $(this).attr('event-name'),
             eventValue: $(this).attr('event-value')
         }
-        if (($(this).attr('event-name') === "offers_tab_clicked") || ($(this).attr('event-name') === "book_now_top_right")) {
-            if (window.location.pathname.indexOf('/outstation-cars') > -1) {
-                eventParams.carCategory = "outstation_route";
-            } else if (window.location.pathname.indexOf('/outstation') > -1) {
-                eventParams.carCategory = "outstation";
-            } else if (window.location.pathname.indexOf('/rentals') > -1) {
-                eventParams.carCategory = "rentals"
-            } else if (window.location.pathname.indexOf('/') > -1) {
-                eventParams.carCategory = "city_taxi"
-            }
-        }
+        // if (($(this).attr('event-name') === "offers_tab_clicked") || ($(this).attr('event-name') === "book_now_top_right")) {
+        //     if (window.location.pathname.indexOf('/outstation-cars') > -1) {
+        //         eventParams.carCategory = "outstation_route";
+        //     } else if (window.location.pathname.indexOf('/outstation') > -1) {
+        //         eventParams.carCategory = "outstation";
+        //     } else if (window.location.pathname.indexOf('/rentals') > -1) {
+        //         eventParams.carCategory = "rentals"
+        //     } else if (window.location.pathname.indexOf('/') > -1) {
+        //         eventParams.carCategory = "city_taxi"
+        //     }
+        // }
         callPublish(eventParams, cb);
     });
 });
