@@ -7,29 +7,29 @@ import { Router } from '@angular/router';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  citytaxi = true;
-  outstation = false;
-  rentals = false;
+  // citytaxi = true;
+  // outstation = false;
+  // rentals = false;
   constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
-  ctytxi() {
-    this.citytaxi = true;
-    this.outstation = false;
-    this.rentals = false;
-  }
-  otstation() {
-    this.citytaxi = false;
-    this.outstation = true;
-    this.rentals = false;
+  // ctytxi() {
+  //   this.citytaxi = true;
+  //   this.outstation = false;
+  //   this.rentals = false;
+  // }
+  // otstation() {
+  //   this.citytaxi = false;
+  //   this.outstation = true;
+  //   this.rentals = false;
 
-  }
-  rntls() {
-    this.citytaxi = false;
-    this.outstation = false;
-    this.rentals = true;
-  }
+  // }
+  // rntls() {
+  //   this.citytaxi = false;
+  //   this.outstation = false;
+  //   this.rentals = true;
+  // }
   // book now button
   // bookaride() {
   //   this.router.navigateByUrl('login');

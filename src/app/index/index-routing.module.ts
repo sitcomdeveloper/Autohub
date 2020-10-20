@@ -1,5 +1,4 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './index/login/login.component';
 
@@ -17,7 +16,6 @@ const routes: Routes = [
   declarations: [],
   imports: [
     RouterModule.forChild(routes),
-    CommonModule,
   ],
   exports: [RouterModule]
 })

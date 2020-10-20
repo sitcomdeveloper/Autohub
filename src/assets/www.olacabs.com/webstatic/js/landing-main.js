@@ -1,5 +1,5 @@
-$(document).ready(function() 
-{ 
+$(document).ready(function()
+{
 	//Sticky header
 
 	// Navigation Menu
@@ -175,8 +175,8 @@ $(document).ready(function()
 		variableWidth: true,
 		autoplay: true,
   		autoplaySpeed: 2000,
-		prevArrow: '<div class="slick-prev"><img src="webstatic/img/sliders/prev-icon.svg"></div>',
-		nextArrow: '<div class="slick-next"><img src="webstatic/img/sliders/next-icon.svg"></div>',
+		prevArrow: '<div class="slick-prev"><img src="assets/www.olacabs.com/webstatic/img/arrowhead-left.png"></div>',
+    nextArrow: '<div class="slick-next"><img src="assets/www.olacabs.com/webstatic/img/arrowhead-right.png"></div>',
 		responsive: [
 		{
 			breakpoint: 768,
