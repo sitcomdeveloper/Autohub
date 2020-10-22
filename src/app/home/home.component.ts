@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { BsModalRef, BsModalService, ModalOptions } from 'ngx-bootstrap/modal';
+import { OtpComponent } from '../otp/otp.component';
 
 @Component({
   selector: 'app-home',
@@ -10,28 +12,22 @@ export class HomeComponent implements OnInit {
   // citytaxi = true;
   // outstation = false;
   // rentals = false;
-  constructor(private router: Router) { }
-
+  constructor(private router: Router, private modalService: BsModalService) { }
+  //
+  bsModalRef: BsModalRef;
   ngOnInit(): void {
   }
-  // ctytxi() {
-  //   this.citytaxi = true;
-  //   this.outstation = false;
-  //   this.rentals = false;
-  // }
-  // otstation() {
-  //   this.citytaxi = false;
-  //   this.outstation = true;
-  //   this.rentals = false;
-
-  // }
-  // rntls() {
-  //   this.citytaxi = false;
-  //   this.outstation = false;
-  //   this.rentals = true;
-  // }
-  // book now button
-  // bookaride() {
-  //   this.router.navigateByUrl('login');
-  // }
+  // open otp verification popup
+  enterOTPpopup() {
+    const initialState = {
+      title: 'Enter the OTP',
+    };
+    // tslint:disable-next-line: max-line-length
+    this.bsModalRef = this.modalService.show(OtpComponent, Object.assign({ backdrop: 'static', show: true }, { class: 'modal750', initialState }));
+    this.bsModalRef.content.closeBtnName = 'Cancel';
+    // this.bsmodal.hide();
+    // this.bsModalRef.content.clddata.subscribe(data => {
+    // this.userDetails();
+    // });
+  }
 }
