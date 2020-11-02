@@ -17,6 +17,9 @@ export class HomeComponent implements OnInit {
   bsModalRef: BsModalRef;
   ngOnInit(): void {
   }
+  login() {
+    this.router.navigateByUrl('/index/login');
+  }
   // open otp verification popup
   enterOTPpopup() {
     const initialState = {
